@@ -12,6 +12,7 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SeekBar;
 
 import com.example.navviewmodel_20211227.databinding.FragmentHomeBinding;
 
@@ -83,6 +84,26 @@ public class HomeFragment extends Fragment {
                 // set navigation controller
                 NavController controller = Navigation.findNavController(v);
                 controller.navigate(R.id.action_homeFragment_to_detailFragment);
+            }
+        });
+
+        // seekbar
+        //step 1 : load data in for seekBar
+        binding.seekBar.setProgress(myViewModel.getNumber().getValue());
+        binding.seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                myViewModel.getNumber().setValue(progress);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
             }
         });
         //view 类型的根节点
