@@ -19,7 +19,7 @@ public class MyViewModel extends ViewModel
     }
 
     // add method
-    void add(int x)
+    public void add(int x)
     {
         number.setValue(number.getValue()+x);
         if (number.getValue()<0)
