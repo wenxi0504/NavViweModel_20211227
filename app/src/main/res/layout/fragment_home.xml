@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+  <variable
+      name="data"
+      type="com.example.navviewmodel_20211227.MyViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -17,7 +19,7 @@
             android:id="@+id/textView2"
             android:layout_width="409dp"
             android:layout_height="724dp"
-            android:text="@string/hello_blank_fragment"
+            android:text="@{String.valueOf(data.number)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
