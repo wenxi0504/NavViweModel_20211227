@@ -78,7 +78,7 @@ public class DetailFragment extends Fragment {
             public void onClick(View v) {
                 NavController controller= Navigation.findNavController(v);
                 controller.navigate(R.id.action_detailFragment_to_homeFragment);
-                
+
             }
         });
         return binding.getRoot();
